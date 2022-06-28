@@ -23,6 +23,21 @@ const router = createRouter({
       name: 'Manage',
       component: () => import('../views/Manage.vue')
     },
+    {
+      path: '/detail_product',
+      name: 'Detail Product',
+      component: () => import('../views/DetailProduct.vue')
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: () => import('../views/Cart.vue')
+    },
+    {
+      path: '/payment',
+      name: 'Payment',
+      component: () => import('../views/Payment.vue')
+    },
   ]
 })
 router.beforeEach((to, from, next) => {

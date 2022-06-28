@@ -32,9 +32,11 @@ export default {
             localStorage.setItem('login_status', 'logged')
             localStorage.setItem('email', r.data.email)
             localStorage.setItem('id', r.data.id)
-            localStorage.setItem('email', r.data.name)
             localStorage.setItem('role', r.data.role)
-            location.href = 'http://0.0.0.0:5001/homepage'
+            localStorage.setItem('phone', r.data.phone)
+            localStorage.setItem('address', r.data.address)
+        }).then(r => {
+            // location.href = 'http://localhost:3000/homepage'
         })
     }
   }
