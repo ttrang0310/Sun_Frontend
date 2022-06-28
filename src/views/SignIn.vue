@@ -91,7 +91,7 @@ export default {
         }
         
         .container {
-            padding: 16px;
+            padding: 16px !important;
         }
         
         span.psw {

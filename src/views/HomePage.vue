@@ -284,7 +284,7 @@
         </div>
     </footer>  
 </template>
-<style lang="css" scope>
+<style lang="scss" scope>
 h2 {
     font-size: 24px;
     text-transform: uppercase;
