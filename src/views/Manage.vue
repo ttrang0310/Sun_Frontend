@@ -1,8 +1,8 @@
 <template>
             <div class="container-fluid" style="background-color: rgb(0, 0, 0);">
-        <div class="row ">
+        <div>
 
-            <div class="col-9 p-5  ">
+            <div>
                 <div class="d-flex ">
                     <div class="   text-white">
                         <h1><strong>Admin: Quản lý sản phẩm</strong></h1>
