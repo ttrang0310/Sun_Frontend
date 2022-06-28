@@ -13,11 +13,11 @@
                     <div class="d-flex  ">
                         <div class="px-4  ">
                             <div class="input-group ">
-                                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                                <input v-model="keyword" type="text" placeholder="Tìm kiếm sản phẩm...">
                                 <div class="input-group-append">
-                                    <button class="btn btn-dark" type="button" id="button-addon2">
+                                    <button @click="search_product" class="btn btn-dark" type="button" id="button-addon2">
                                               <i class="fas fa-search"></i>
-                                          </button>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -36,30 +36,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr v-for="p in products" :key="p.id">
                                     <td style="width: 10%;">
-                                        <img src="img/Blue.jpeg" style="width: 100%;" alt="">
+                                    <img :src="p.imgs[0]" style="width: 100%;" alt="">
                                     </td>
-                                    <td>Blue </td>
-                                    <td>T-shirt</td>
-                                    <td>350000</td>
-                                    <td>23</td>
-                                    <td><a href="/edit.html" class="">Sửa </a></td>
-                                    <td><a href="#" class="">Xóa  </a></td>
+                                    <td>{{ p.title }}</td>
+                                    <td>{{ p.category }}</td>
+                                    <td>{{ p.price }}</td>
+                                    <td>{{ p.quantity }}</td>
+                                    <td @click="update_product(p)"><a  class="">Sửa </a></td>
+                                    <td @click="delete_product(p.id)"><a  class="">Xoá </a></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 10%;">
-                                        <img src="img/OutDoor Jacket.jpg" style="width: 100%;" alt="">
-                                    </td>
-                                    <td>OutDoor Jacket </td>
-                                    <td>Jacket</td>
-                                    <td>230000</td>
-                                    <td>63</td>
-                                    <td><a href="/edit.html" class="">Sửa </a></td>
-                                    <td><a href="#" class="">Xóa  </a></td>
-                                </tr>
-
-
                             </tbody>
                         </table>
 
@@ -89,17 +76,41 @@
     </div>
 </template>
 <script>
+import api from '@/api/base'
 export default {
     data() {
         return {
-            
+            products: [],
+            edit: {},
+            keyword: ''
         }
     },
     methods: {
+        update_product: function (body) {
+            api.put('/products', body)
+                .then(r => {
+                alert(r.data.msg)
+            })
+        },
+        delete_product: function (_id) {
+            api.delete(`/products?id=${_id}`)
+                .then(r => {
+                    alert(r.data.msg)
+            })
+        },
+        search_product: function () {
+            api.get(`/products?keyword=${this.keyword}`)
+                .then(r => {
+                    this.products = r.data.products
+                })
+        }
 
     },
-    created: {
-
+    created () {
+        api.get('/products')
+            .then(r => {
+                this.products = r.data.products
+            })
     }
 }
 </script>
