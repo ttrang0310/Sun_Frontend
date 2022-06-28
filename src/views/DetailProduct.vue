@@ -52,7 +52,7 @@
             </div>
             <div class="col-sm-4 p-3 bg-white">
                 <div style="font-size: 30px; color: red">Signature 1 Tee SKU</div>
-                <div style="font-size: 20px;"> 390.000</div>
+                <div style="font-size: 20px;"> {{ product.price }}</div>
                 <div>
                     <ul class=" pagination ">
                         <li @click="decrease" class="page-item "><a class="page-link " href="# ">-</a></li>

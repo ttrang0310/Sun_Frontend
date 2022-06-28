@@ -70,7 +70,7 @@
     <div style="margin-left: 1000px">
         <div style="font-size: 20px;">Total: {{ this.total }}</div>
         <div>
-            <router-link  target="_blank" :to="{path: 'homepage',}">
+            <router-link  target="_blank" :to="{path: 'payment',}">
                 <button type="button" class="btn btn-danger">Thanh toán</button>
             </router-link>
         </div>
@@ -85,6 +85,9 @@ export default {
     }),
     created () {
         this.cart = JSON.parse(localStorage.getItem('cart'))
+        if (!this.cart) {
+            this.cart = []
+        }
         if (this.cart.length) {
             this.cart.forEach(p => this.total = this.total + (p.quantity * p.price))
         }

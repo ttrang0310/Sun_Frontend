@@ -56,6 +56,7 @@
                 <td>
                     <div style="color: red ">{{ p.title }}</div>
                     <div>{{ p.price }}</div>
+                    <div>{{ p.quantity }}</div>
                 </td>
 
             </tr>
@@ -81,6 +82,7 @@
           </select>
     <!-- </form> -->
     <div style="color: red;  ">Tạm tính: {{ this.total }}</div>
+    <div style="color: red; ">Tổng tiền: {{ this.total + 30000 }} </div>
     <div style="color: red; ">Tổng tiền: {{ this.total + 30000 }} </div>
     <button @click="create_order" type="button" class="btn btn-dark">Hoàn tất đơn hàng</button>
 </div>
@@ -108,9 +110,11 @@ export default {
     methods: {
         create_order: function () {
             if (this.cart.length) {
-                api.post('/orders', {'items': this.cart})
+                api.post('/payment', {'items': this.cart})
                     .then(r => {
-                    alert(r.data.msg)
+                        if (r.data.status) {
+                        location.href = r.data.url
+                    }
                 })
             }
         }
