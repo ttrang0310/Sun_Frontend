@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h2>Đăng nhập </h2>
+    <h2 style="text-align: center;margin-top: 50px;font-size: 30px;" >Đăng nhập </h2>
 
       <div class="container" style="width: fit-content;  " method="post">
-          <label for="uname"><b>Username</b></label>
-          <input v-model="email" id="username" type="text" placeholder=" Username......" name="usename" required>
+          <label for="uname" style="color: black;"><b>Username</b></label>
+          <input v-model="email" id="username" type="text" style="color: black;" placeholder=" Username......" name="usename" required>
 
-          <label for="psw"><b>Password</b></label>
-          <input v-model="password" type="password" placeholder="Password..." name="password" required>
+          <label for="psw" style="color: black;"><b>Password</b></label>
+          <input v-model="password" type="password"  style="color: black;" placeholder="Password..." name="password" required>
 
           <!-- <a href="./management.html" class=""> -->
-              <button @click="signIn" type="button" class="btn btn-link" name="login" style="background-color: black;">Đăng nhập</button>
+              <button @click="signIn" type="button"  class="btn btn-link" name="login" style="background-color: black; color: white; height: 40px; font-size: 15px;">Đăng nhập</button>
           <!-- </a> -->
           <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+       
       </label>
       </div>
   </div>

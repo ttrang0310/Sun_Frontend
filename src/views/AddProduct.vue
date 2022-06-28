@@ -38,23 +38,19 @@ export default ({
 
 <template>
     <form>
-        <h2>Thêm sản phẩm</h2>
-
-        <img src="img/1-ba9207-tx01-2_6c57e57e57f848a3aaedf4536d75cbac_master.jpg" alt="Girl in a jacket" width="70" height="70">
-
-
+        <h2  style="color: black; text-align: center;margin-top: 40px;margin-bottom: 0;  ">Thêm sản phẩm</h2> 
         <div class="container">
-            <input v-model="title" id="title" type="text" placeholder="Nhập tên sản phẩm" name="title" required>
-            <input v-model="price" type="text" placeholder="Nhập giá sản phẩm" name="price" required>
-            <input v-model="description" type="text" placeholder="Nhập mô tả sản phẩm" name="description" required>
-            <input v-model="quantity" type="text" placeholder="Nhập số lượng sản phẩm" name="quantity" required>
-            <input v-model="main_url" type="text" placeholder="Main url" name="main_url" required>
-            <input v-model="secondary_url" type="text" placeholder="second url" name="second_url" required>
-            <input v-model="thirt_url" type="text" placeholder="thirt url" name="thirt_url" required>
+            <input v-model="title" id="title" type="text"  style="height:35px;color: black;" placeholder="Nhập tên sản phẩm" name="title" required>
+            <input v-model="price" type="text" style="height:35px;color: black;" placeholder="Nhập giá sản phẩm" name="price" required>
+            <input v-model="description" type="text" style="height:35px;color: black;" placeholder="Nhập mô tả sản phẩm" name="description" required>
+            <input v-model="quantity" type="text" style="height:35px;color: black;" placeholder="Nhập số lượng sản phẩm" name="quantity" required>
+            <input v-model="main_url" type="text"  style="height:35px;color: black;" placeholder="Ảnh sản phẩm 1" name="main_url" required>
+            <input v-model="secondary_url" type="text" style="height:35px;color: black;" placeholder="Ảnh sản phẩm 2" name="second_url" required>
+            <input v-model="thirt_url" type="text" style="height:35px;color: black;" placeholder="Ảnh sản phẩm 3" name="thirt_url" required>
 
             <label for="cars">Chọn danh mục sản phẩm: </label>
 
-            <select v-model="category" name="category" id="category">
+            <select v-model="category" name="category" id="category"  style="height:30px; width: 200px;" >
                  <option value="tshirt">T-shirt</option>
                 <option value="hoodie">Hoodie</option>
                 <option value="quan">Quần</option>
@@ -62,8 +58,8 @@ export default ({
                 <option value="aokhoac">Áo khoác</option>
             </select><br>
 
-            <a href="management.html"> <button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 100px;">Hủy</button></a>
-            <button @click="create_product" type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 200px;">Thêm sản phẩm</button>
+            <a href="management.html"> <button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); height: 40px; width: 200px; font-size: 15px; margin-left: 30%;">Hủy</button></a>
+            <button @click="create_product" type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255);  height: 40px;width: 200px; font-size: 15px;">Thêm sản phẩm</button>
         </div>
     </form>
 
