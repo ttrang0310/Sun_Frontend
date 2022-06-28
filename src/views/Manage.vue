@@ -1,16 +1,16 @@
 <template>
-            <div class="container-fluid" style="background-color: rgb(0, 0, 0);">
+            <div >
         <div>
 
-            <div>
-                <div class="d-flex ">
-                    <div class="   text-white">
+            <div class="abc">
+                <div>
+                    <div >
                         <h1><strong>Admin: Quản lý sản phẩm</strong></h1>
                     </div>
                 </div>
 
                 <div class="  ">
-                    <div class="d-flex  ">
+                    <div class="   ">
                         <div class="px-4  ">
                             <div class="input-group ">
                                 <input v-model="keyword" type="text" placeholder="Tìm kiếm sản phẩm...">
@@ -114,6 +114,6 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style lang="sass" scoped>
 
 </style>

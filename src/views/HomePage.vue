@@ -1,29 +1,18 @@
 <template>
-          <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="sign">
-            <a href="./signup.html" class="">
-                <button type="button" class="btn btn-link">Đăng ký</button>
-            </a>
-
-            <a href="./login.html" class="">
-                <button type="button" class="btn btn-link">Đăng nhập</button>
-            </a>
-            <div style="margin-top: 10px;">
-                <i class='bx bxs-cart-download' style=" font-size: 30px"></i>
-            </div>
-        </div>
-        <div class="container">
-            <a class="navbar-brand" href="#myPage">SHYNTEE</a>
+          <nav class="navbar navbar-default  ">
+        
+        <div class="container" style="display:inline">
+           <div> <a class="navbar-brand" href="#myPage">SUN</a></div>
 
             <div class="input-group">
-                <input type="search" class="form-control" style="margin-left: 5 0px;" placeholder="Nhập tên sản phẩm" required>
+                <input type="search" class="form-control"  style="font-size:15px" placeholder="Nhập tên sản phẩm" required>
                 <div class="input-group-btn">
-                    <button type="button" class="btn btn-dark">Tìm kiếm</button>
+                    <button type="button" class="btn btn-dark" style="font-size:15px">Tìm kiếm</button>
                 </div>
                 <div></div>
             </div>
             <div>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav "  style="display:inline-block">
                     <li><a href="./homepage.html">TRANG CHỦ</a></li>
                     <li><a href="./sanpham.html">SẢN PHẨM</a></li>
                     <li><a href=" ">GIỚI THIỆU</a></li>
@@ -33,6 +22,18 @@
             </div>
 
 
+        </div>
+        <div class="sign">
+            <a href="./signup.html" class="">
+                <button type="button" class="btn btn-link"   style="font-size:15px" >Đăng ký</button>
+            </a>
+
+            <a href="./login.html" class="">
+                <button type="button" class="btn btn-link" style="font-size: 15px;">Đăng nhập</button>
+            </a>
+            <div style="margin-top: 10px;">
+                <i class='bx bxs-cart-download' style=" font-size: 30px"></i>
+            </div>
         </div>
 
     </nav>
@@ -77,7 +78,7 @@
     <div class="container  text-center ">
         <div class="row text-center">
             <a href="detailSanpham.html">
-                <div class=" hovercol col-sm-4">
+                <div class="  " style="margin-right: 200px;" >
                     <div class="thumbnail">
                         <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
                         <p><strong>T-shirt</strong></p>
@@ -85,24 +86,26 @@
                     </div>
                 </div>
             </a>
-
-            </div>
-            <div class="hovercol col-sm-4">
-                <div class="thumbnail">
-                    <img src="img/Tote Bag Canvas.jpg" alt="New York">
-                    <p><strong>Phụ kiện</strong></p>
-                    <p>Siêu ưu đãi</p>
+            <a href="detailSanpham.html">
+                            <div class="  " style="margin-right: 200px;">
+                                <div class="thumbnail">
+                                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
+                                    <p><strong>T-shirt</strong></p>
+                                    <p>Giảm giá shok</p>
+                                </div>
+                            </div>
+                        </a>
+            <a href="detailSanpham.html">
+                <div class="  ">
+                    <div class="thumbnail">
+                        <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
+                        <p><strong>T-shirt</strong></p>
+                        <p>Giảm giá shok</p>
+                    </div>
                 </div>
-            </div>
-            <div class="hovercol col-sm-4">
-                <div class="thumbnail">
-                    <img src="img/Sweater Tiedye.jpg" alt="San Francisco">
-                    <p><strong>Áo khoác</strong></p>
-                    <p>Bán chạy</p>
-                </div>
-            </div>
+            </a>
     </div>
-
+</div>
     <!-- ------------------------------------------ -->
     <div>
 
@@ -112,7 +115,7 @@
             </video>
 
         <!-- ------------------------------------------- -->
-        <br>
+        <br><br><br><br> 
         <h4>__________ SẢN PHẨM MỚI VỀ __________</h4><br>
         <div class="container" id="myslide1" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
             <div>
@@ -265,16 +268,16 @@
         <div class="row  ">
             <div class="col-sm-4 thumbnail ">
                 <div class="my-5">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26081603.29442044!2d-95.677068!3d37.06250000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1633069353566!5m2!1svi!2s" width=" " height="200px" style="border:0;" allowfullscreen=""
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26081603.29442044!2d-95.677068!3d37.06250000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1633069353566!5m2!1svi!2s" width=" " height="200px" style="border:0;"  
                         loading="lazy"></iframe>
                 </div>
             </div>
             <div class="col-sm-4 thumbnail" style="height: 217px;">
-                <h4>SHYNTEE</h4>
+                <h4  style="color: white ;">SHYNTEE</h4>
                 <p>SHYNTEE được thành lập vào năm 2021 Tất cả sản phẩm của SHYNTEE đều được tự thiết kế và sản xuất dựa theo tiêu chí chất lượng. Tất cả sản phẩm của SHYNTEE đều thuộc bản quyền của SHYNTEE </p>
             </div>
             <div class="col-sm-4 thumbnail" style="height: 217px;">
-                <h4>THÔNG TIN LIÊN HỆ</h4>
+                <h4 style="color: white" >THÔNG TIN LIÊN HỆ</h4>
                 <p> Hotline: 0984269047 <br>Cơ sở 1: Yên Mô – Ninh Bình <br>Cơ sở 2: Hà Đông – Hà Nội<br> Mail: ttrang03102000@gmail.com
 
                 </p>
@@ -599,3 +602,49 @@ footer .thumbnail {
     border-bottom: 0px !important;
 }
 </style>
+<script>
+export default {
+    mounted () {
+            $('#myslide1').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        dots: true,
+    });
+    $('#myslide2').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        dots: true,
+    });
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="countdown"
+        document.getElementById("countdown").innerHTML = days + " Ngày " + hours + " giờ " +
+            minutes + " phút " + seconds + " giây ";
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+   } 
+}
+</script>
