@@ -81,7 +81,7 @@ export default {
         quantity: 1,
     }),
     created () {
-        var url = `/products/${this.$route.query.id}` 
+        var url = `/products?product_id=${this.$route.query.id}` 
         api.get(url)
             .then(r => {
                 this.product = r.data.product
