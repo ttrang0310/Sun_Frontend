@@ -1,52 +1,48 @@
-<script>
-export default ({
-    data () {
-        return {
-           title: '', 
-        }
-    },
-    methods: {
-        test: function () {
-            alert(this.title)
-        }
-    },
-})
-</script>
-
 <template>
-    <form>
-        <h2>Thêm sản phẩm</h2>
+  <div>
+    <h2>Đăng nhập </h2>
 
-        <img src="img/1-ba9207-tx01-2_6c57e57e57f848a3aaedf4536d75cbac_master.jpg" alt="Girl in a jacket" width="70" height="70">
+      <div class="container" style="width: fit-content;  " method="post">
+          <label for="uname"><b>Username</b></label>
+          <input v-model="email" id="username" type="text" placeholder=" Username......" name="usename" required>
 
+          <label for="psw"><b>Password</b></label>
+          <input v-model="password" type="password" placeholder="Password..." name="password" required>
 
-        <div class="container">
-            <input v-model="title" id="title" type="text" placeholder="Nhập tên sản phẩm" name="title" required>
-            <input id="price" type="text" placeholder="Nhập giá sản phẩm" name="price" required>
-            <input id="description" type="text" placeholder="Nhập mô tả sản phẩm" name="description" required>
-            <input id="quantity" type="text" placeholder="Nhập số lượng sản phẩm" name="quantity" required>
-            <input id="img1" type="text" placeholder="Main url" name="main_url" required>
-            <input id="img2" type="text" placeholder="second url" name="second_url" required>
-            <input id="img3" type="text" placeholder="thirt url" name="thirt_url" required>
-
-            <label for="cars">Chọn danh mục sản phẩm: </label>
-
-            <select name="category" id="category">
-                 <option value="tshirt">T-shirt</option>
-                <option value="hoodie">Hoodie</option>
-                <option value="quan">Quần</option>
-                <option value="phukien">Phụ kiện</option>
-                <option value="aokhoac">Áo khoác</option>
-            </select><br>
-
-            <a href="management.html"> <button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 100px;">Hủy</button></a>
-            <button @click="test" type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 200px;">Thêm sản phẩm</button>
-        </div>
-    </form>
-
+          <!-- <a href="./management.html" class=""> -->
+              <button @click="signIn" type="button" class="btn btn-link" name="login" style="background-color: black;">Đăng nhập</button>
+          <!-- </a> -->
+          <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      </div>
+  </div>
 </template>
-<style lang="scss" scoped>
-        body {
+<script>
+import api from "@/api/base"
+export default {
+  data: () => ({
+    email: '',
+    password: ''
+  }),
+  methods: {
+    signIn: function () {
+      api.post('/login', {email: this.email, password: this.password})
+        .then(r => {
+            localStorage.setItem('login_status', 'logged')
+            localStorage.setItem('email', r.data.email)
+            localStorage.setItem('id', r.data.id)
+            localStorage.setItem('email', r.data.name)
+            localStorage.setItem('role', r.data.role)
+            location.href = 'http://0.0.0.0:5001/homepage'
+        })
+    }
+  }
+}
+</script>
+<style lang="scss" scope>
+@media (min-width: 1024px) {
+          body {
             font-family: Arial, Helvetica, sans-serif;
         }
         
@@ -113,4 +109,6 @@ export default ({
                 width: 100%;
             }
         }
+
+}
 </style>
