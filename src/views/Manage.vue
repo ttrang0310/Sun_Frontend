@@ -1,13 +1,44 @@
 <template>
+ <nav class="navbar navbar-default  ">
+        
+        <div class="container" style="display:inline">
+           <div> <a class="navbar-brand" href="#myPage">SUN </a></div>
+
+            <div class="input-group">
+                <input type="search" class="form-control"  style="font-size:15px" placeholder="Nhập tên sản phẩm" required>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-dark" style="font-size:15px">Tìm kiếm</button>
+                </div>
+                <div></div>
+            </div>
+            <div>
+                <ul class="nav navbar-nav "  style="display:inline-block">
+                    <li><a href="./homepage.html">TRANG CHỦ</a></li>
+                    <li><a href="./sanpham.html">SẢN PHẨM</a></li>
+                    <li><a href=" ">GIỚI THIỆU</a></li>
+                    <li><a href=" ">HƯỚNG DẪN</a></li>
+                    <li><a href=" ">BẢNG SIZE</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="sign">
+            <a href=" " class="">
+                <button type="button" class="btn btn-link"   style="font-size:15px" >Đăng xuất</button>
+            </a>
+            <a href=" " class="">
+                <button type="button" class="btn btn-link"   style="font-size:15px" >ADMIN</button>
+            </a>
+ 
+        </div>
+
+    </nav>
             <div >
         <div>
 
             <div class="abc">
-                <div>
-                    <div >
-                        <h1><strong>Admin: Quản lý sản phẩm</strong></h1>
-                    </div>
-                </div>
+              
 
                 <div class="  ">
                     <div class="   ">
@@ -22,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light m-4 p-3   ">
+                    <div class="bg-light   " style="margin-left: 200px;margin-right: 300px;">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -52,25 +83,9 @@
 
                     </div>
                 </div>
-                <a href="add.html"><button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 200px;">Thêm sản phẩm</button></a>
+                <a href="add.html"><button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 200px; height: 40px; font-size: 15px; margin-left: 500px;">Thêm sản phẩm</button></a>
 
-                <div class="d-flex justify-content-end pr-4">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link text-dark" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link text-dark" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                 
             </div>
         </div>
     </div>
