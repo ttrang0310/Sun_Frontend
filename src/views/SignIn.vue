@@ -32,6 +32,7 @@ export default {
             localStorage.setItem('login_status', 'logged')
             localStorage.setItem('email', r.data.email)
             localStorage.setItem('id', r.data.id)
+            localStorage.setItem('name', r.data.name)
             localStorage.setItem('role', r.data.role)
             localStorage.setItem('phone', r.data.phone)
             localStorage.setItem('address', r.data.address)

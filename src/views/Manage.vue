@@ -126,7 +126,7 @@ export default {
     },
     created () {
         this.sockets.subscribe('PAYMENT', (body) => {
-            alert(`${body.email} - ${body.phone} - ${body.address} payment success order total ${body.total}`)
+            alert(`${body.data.email} - ${body.data.phone} - ${body.data.address} payment success order total ${body.total}`)
     })
         api.get('/products')
             .then(r => {
