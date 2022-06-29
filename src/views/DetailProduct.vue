@@ -1,57 +1,55 @@
 <template>
-        <nav class="navbar navbar-default navbar-fixed-top">
+         <nav class="navbar navbar-default  ">
+        
+        <div class="container" style="display:inline">
+           <div> <a class="navbar-brand" href="#myPage">SUN</a></div>
+
+            <div class="input-group">
+                <input type="search" class="form-control"  style="font-size:15px" placeholder="Nhập tên sản phẩm" required>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-dark" style="font-size:15px">Tìm kiếm</button>
+                </div>
+                <div></div>
+            </div>
+            <div>
+                <ul class="nav navbar-nav "  style="display:inline-block">
+                    <li><a href="/homepage">TRANG CHỦ</a></li>
+                    <li><a href="/products">SẢN PHẨM</a></li>
+                    <li><a href=" ">GIỚI THIỆU</a></li>
+                    <li><a href=" ">HƯỚNG DẪN</a></li>
+                    <li><a href=" ">BẢNG SIZE</a></li>
+                </ul>
+            </div>
+
+
+        </div>
         <div class="sign">
             <a href="./signup.html" class="">
-                <button type="button" class="btn btn-link">Đăng ký</button>
+                <button type="button" class="btn btn-link"   style="font-size:15px" >Đăng ký</button>
             </a>
 
             <a href="./login.html" class="">
-                <button type="button" class="btn btn-link">Đăng nhập</button>
+                <button type="button" class="btn btn-link" style="font-size: 15px;">Đăng nhập</button>
             </a>
             <div style="margin-top: 10px;">
                 <i class='bx bxs-cart-download' style=" font-size: 30px"></i>
             </div>
         </div>
 
-
-        <div class="container">
-            <a class="navbar-brand" href="#myPage">SHYNTEE</a>
-
-            <div class="input-group">
-                <input type="search" class="form-control" style="margin-left: 5 0px;" placeholder="Nhập tên sản phẩm" required>
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-dark">Tìm kiếm</button>
-                </div>
-
-            </div>
-
-
-            <div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./homepage.html">TRANG CHỦ</a></li>
-                    <li><a href="./sanpham.html">SẢN PHẨM</a></li>
-                    <li><a href="./detailSanpham.html">GIỚI THIỆU</a></li>
-                    <li><a href="#pricing">HƯỚNG DẪN</a></li>
-                    <li><a href="#contact">BẢNG SIZE</a></li>
-                </ul>
-            </div>
-
-
-        </div>
-
     </nav>
     <!-- --------------------------------------------------------- -->
 
-    <div style="margin-top: 200px;height: 100%;">
+    <div style="margin-top: 20px;height: 100%;">
         <div class="row">
             <div class="col-sm-3 p-3 bg-white">
-                <div> <img v-for="(img, idx) in product.imgs" :key="idx" style="height: 100px; width: 100px;" :src="img"> </div>
+                  <img v-for="(img, idx) in product.imgs" :key="idx" style="height: 100px; width: 100px;" :src="img"> 
             </div>
             <div class="col-sm-5  bg-white">
                 <img style="height: 400px; width: 400px;" :src="product.imgs[0]">
             </div>
+            
             <div class="col-sm-4 p-3 bg-white">
-                <div style="font-size: 30px; color: red">Signature 1 Tee SKU</div>
+                <div style="font-size: 30px;  ">Signature 1 Tee SKU</div>
                 <div style="font-size: 20px;"> {{ product.price }}</div>
                 <div>
                     <ul class=" pagination ">
@@ -61,7 +59,7 @@
                     </ul>
                 </div>
 
-                <button @click="add_to_cart" class="btn btn-secondary ">Thêm vào giỏ hàng</button>
+                <button @click="add_to_cart" class="btn btn-dark " style="height: 40px;width: 200px; font-size: 15px;">Thêm vào giỏ hàng</button>
                 <div style="margin-top: 20px">
                     MÔ TẢ
                     <br>Chất liệu: Cotton 2 chiều

@@ -83,7 +83,7 @@
 
                     </div>
                 </div>
-                <a href="/add_product"><button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 200px; height: 40px; font-size: 15px; margin-left: 500px;">Thêm sản phẩm</button></a>
+                <a href="/add_product"><button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 200px; height: 40px; font-size: 15px; margin-left: 500px;margin-bottom: 100px;">Thêm sản phẩm</button></a>
 
                  
             </div>

@@ -1,48 +1,45 @@
 <template>
-        <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="sign">
-            <a href="./signup.html" class="">
-                <button type="button" class="btn btn-link">Đăng ký</button>
-            </a>
-
-            <a href="./login.html" class="">
-                <button type="button" class="btn btn-link">Đăng nhập</button>
-            </a>
-            <div style="margin-top: 10px;">
-                <i class='bx bxs-cart-download' style=" font-size: 30px"></i>
-            </div>
-
-
-        </div>
-        <div class="container">
-            <a class="navbar-brand" href="#myPage">SHYNTEE</a>
+         <nav class="navbar navbar-default  ">
+        
+        <div class="container" style="display:inline">
+           <div> <a class="navbar-brand" href="#myPage">SUN</a></div>
 
             <div class="input-group">
-                <input type="search" class="form-control" style="margin-left: 5 0px;" placeholder="Nhập tên sản phẩm" required>
+                <input type="search" class="form-control"  style="font-size:15px" placeholder="Nhập tên sản phẩm" required>
                 <div class="input-group-btn">
-                    <button type="button" class="btn btn-dark">Tìm kiếm</button>
+                    <button type="button" class="btn btn-dark" style="font-size:15px">Tìm kiếm</button>
                 </div>
-
+                <div></div>
             </div>
-
-
             <div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./homepage.html">TRANG CHỦ</a></li>
-                    <li><a href="./sanpham.html">SẢN PHẨM</a></li>
-                    <li><a href="./detailSanpham.html">GIỚI THIỆU</a></li>
-                    <li><a href="#pricing">HƯỚNG DẪN</a></li>
-                    <li><a href="#contact">BẢNG SIZE</a></li>
+                <ul class="nav navbar-nav "  style="display:inline-block">
+                    <li><a href="/homepage">TRANG CHỦ</a></li>
+                    <li><a href="/products">SẢN PHẨM</a></li>
+                    <li><a href=" ">GIỚI THIỆU</a></li>
+                    <li><a href=" ">HƯỚNG DẪN</a></li>
+                    <li><a href=" ">BẢNG SIZE</a></li>
                 </ul>
             </div>
 
 
         </div>
+        <div class="sign">
+            <a href="./signup.html" class="">
+                <button type="button" class="btn btn-link"   style="font-size:15px" >Đăng ký</button>
+            </a>
+
+            <a href="./login.html" class="">
+                <button type="button" class="btn btn-link" style="font-size: 15px;">Đăng nhập</button>
+            </a>
+            <div style="margin-top: 10px;">
+                <i class='bx bxs-cart-download' style=" font-size: 30px"></i>
+            </div>
+        </div>
 
     </nav>
     <!-- --------------------------------------------------------- -->
 
-    <div style="margin-top: 200px;height: 100%;">
+    <div style="margin-top: 30px;height: 100%;">
 
     </div>
     <h4>__________ Giỏ hàng của bạn __________</h4><br>
@@ -53,7 +50,7 @@
             <tr v-for="(p, idx) in cart" :key="p.id">
                 <td style="width: 70px"> <img :src="p.imgs[0]" style="height: 100px; "> </td>
                 <td>
-                    <div style="color: red ">{{ p.title }}</div>
+                    <div  >{{ p.title }}</div>
                     <div>{{ p.price }}</div>
                     <ul class="pagination ">
                         <li @click="p.quantity--, has_changed = !has_changed" class="page-item "><a class="page-link " href="# " style="color: black ">-</a></li>
@@ -71,8 +68,9 @@
         <div style="font-size: 20px;">Total: {{ this.total }}</div>
         <div>
             <router-link  target="_blank" :to="{path: 'payment',}">
-                <button type="button" class="btn btn-danger">Thanh toán</button>
+                <button type="button" class="btn btn-dark" style="height:40px; width:100px; font-size:15px" >Thanh toán</button><br><br>
             </router-link>
+            
         </div>
     </div>
 </template>
