@@ -41,12 +41,12 @@ const router = createRouter({
   ]
 })
 router.beforeEach((to, from, next) => {
-  if (to.path == "/login"){
+  if (to.path == "/signin"){
     next()
   }
-  // else if (!isValidJwt()){
-  //   next("/login")
-  // }
+  else if (localStorage.getItem('login_status') != 'logged'){
+    next("/signin")
+  }
   else {
     next()
   }

@@ -36,7 +36,7 @@ export default {
             localStorage.setItem('phone', r.data.phone)
             localStorage.setItem('address', r.data.address)
         }).then(r => {
-            // location.href = 'http://localhost:3000/homepage'
+            location.href = 'http://localhost:3000/homepage'
         })
     }
   }

@@ -13,8 +13,8 @@
             </div>
             <div>
                 <ul class="nav navbar-nav "  style="display:inline-block">
-                    <li><a href="./homepage.html">TRANG CHỦ</a></li>
-                    <li><a href="./sanpham.html">SẢN PHẨM</a></li>
+                    <li><a href="/homepage">TRANG CHỦ</a></li>
+                    <li><a href="/products">SẢN PHẨM</a></li>
                     <li><a href=" ">GIỚI THIỆU</a></li>
                     <li><a href=" ">HƯỚNG DẪN</a></li>
                     <li><a href=" ">BẢNG SIZE</a></li>

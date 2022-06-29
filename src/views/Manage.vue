@@ -25,7 +25,7 @@
         </div>
         <div class="sign">
             <a href=" " class="">
-                <button type="button" class="btn btn-link"   style="font-size:15px" >Đăng xuất</button>
+                <button @click="logout" type="button" class="btn btn-link"   style="font-size:15px" >Đăng xuất</button>
             </a>
             <a href=" " class="">
                 <button type="button" class="btn btn-link"   style="font-size:15px" >ADMIN</button>
@@ -83,10 +83,7 @@
 
                     </div>
                 </div>
-                <!-- <a href="add.html"><button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 200px; height: 40px; font-size: 15px; margin-left: 500px;">Thêm sản phẩm</button></a> -->
-                <router-link  target="_blank" :to="{path: 'add_product',}">
-                    <button type="button" class="btn btn-secondary">Thêm sản phẩm</button>
-                </router-link>
+                <a href="/add_product"><button type="button" class="btn btn-secondary" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); width: 200px; height: 40px; font-size: 15px; margin-left: 500px;">Thêm sản phẩm</button></a>
 
                  
             </div>
@@ -109,6 +106,9 @@ export default {
                 .then(r => {
                 alert(r.data.msg)
             })
+        },
+        logout: function () {
+            localStorage.setItem('login_status', 'not loggin')
         },
         delete_product: function (_id) {
             api.delete(`/products?id=${_id}`)
