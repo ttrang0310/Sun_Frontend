@@ -1,15 +1,15 @@
 <template>
     <div class="container" style="width: fit-content; ">
-        <h1>Đăng ký</h1>
-        <hr>
+         <h2 style="text-align: center;margin-top: 50px;font-size: 30px;" >Đăng ký </h2>
 
-        <input v-model="email" type="text" placeholder="Nhập Email" id="email">
-        <input v-model="name" type="text" placeholder="Nhập name" id="name">
-        <input v-model="password" type="text" placeholder="Nhập Password" id="password">
-        <input v-model="phone" type="text" placeholder="Nhập Số điện thoại" id="phone">
-        <input v-model="address" type="text" placeholder="Nhập địa chỉ" id="address">
-
-        <button @click="signup" type="button " class="btn btn-link " style="background-color: black; ">Đăng ký</button>
+        <hr>  
+        <input v-model="email" type="text" placeholder="Nhập Email" id="email" style="color: black; width: 800px;"><br> <br>  
+        <input v-model="name" type="text" placeholder="Nhập name" id="name" style="color: black; width: 800px;"><br> <br> 
+        <input v-model="password" type="text" placeholder="Nhập Password" id="password" style="color: black; width: 800px;" ><br> <br> 
+        <input v-model="phone" type="text" placeholder="Nhập Số điện thoại" id="phone" style="color: black; width: 800px;"><br> <br> 
+        <input v-model="address" type="text" placeholder="Nhập địa chỉ" id="address" style="color: black; width: 800px;"><br>   
+<br>   <br>   
+        <button @click="signup" type="button " class="btn btn-link " style="background-color: black;font-size: 15px;color: white;width: 200px; margin-left: 250px; ">Đăng ký</button>
 
 
     </div>
