@@ -44,9 +44,9 @@ export default ({
             <input v-model="price" type="text" style="height:35px;color: black;" placeholder="Nhập giá sản phẩm" name="price" required>
             <input v-model="description" type="text" style="height:35px;color: black;" placeholder="Nhập mô tả sản phẩm" name="description" required>
             <input v-model="quantity" type="text" style="height:35px;color: black;" placeholder="Nhập số lượng sản phẩm" name="quantity" required>
-            <input v-model="main_url" type="text"  style="height:35px;color: black;" placeholder="Ảnh sản phẩm 1" name="main_url" required>
-            <input v-model="secondary_url" type="text" style="height:35px;color: black;" placeholder="Ảnh sản phẩm 2" name="second_url" required>
-            <input v-model="thirt_url" type="text" style="height:35px;color: black;" placeholder="Ảnh sản phẩm 3" name="thirt_url" required>
+            <input v-model="img1" type="text"  style="height:35px;color: black;" placeholder="Ảnh sản phẩm 1" name="main_url" required>
+            <input v-model="img2" type="text" style="height:35px;color: black;" placeholder="Ảnh sản phẩm 2" name="second_url" required>
+            <input v-model="img3" type="text" style="height:35px;color: black;" placeholder="Ảnh sản phẩm 3" name="thirt_url" required>
 
             <label for="cars">Chọn danh mục sản phẩm: </label>
 
