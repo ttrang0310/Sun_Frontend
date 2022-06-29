@@ -15,8 +15,8 @@
                 <ul class="nav navbar-nav "  style="display:inline-block">
                     <li><a href="/homepage">TRANG CHỦ</a></li>
                     <li><a href="/products">SẢN PHẨM</a></li>
-                    <li><a href=" ">GIỚI THIỆU</a></li>
-                    <li><a href=" ">HƯỚNG DẪN</a></li>
+                    <li><a href="coming soon">GIỚI THIỆU</a></li>
+                    <li><a href="">HƯỚNG DẪN</a></li>
                     <li><a href=" ">BẢNG SIZE</a></li>
                 </ul>
             </div>
@@ -77,29 +77,11 @@
     <!-- --------------------------------- -->
     <div class="container  text-center ">
         <div class="row text-center">
-            <a href="detailSanpham.html">
+            <a v-for="p in top" :key="p.id" :href="`/detail_product?id=${p.id}`">
                 <div class="  " style="margin-right: 200px;" >
                     <div class="thumbnail">
-                        <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
-                        <p><strong>T-shirt</strong></p>
-                        <p>Giảm giá shok</p>
-                    </div>
-                </div>
-            </a>
-            <a href="detailSanpham.html">
-                            <div class="  " style="margin-right: 200px;">
-                                <div class="thumbnail">
-                                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
-                                    <p><strong>T-shirt</strong></p>
-                                    <p>Giảm giá shok</p>
-                                </div>
-                            </div>
-                        </a>
-            <a href="detailSanpham.html">
-                <div class="  ">
-                    <div class="thumbnail">
-                        <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
-                        <p><strong>T-shirt</strong></p>
+                        <img :src="p.imgs[0]" alt="Paris">
+                        <p><strong>p.category</strong></p>
                         <p>Giảm giá shok</p>
                     </div>
                 </div>
@@ -118,52 +100,10 @@
         <br><br><br><br> 
         <h4>__________ SẢN PHẨM MỚI VỀ __________</h4><br>
         <div class="container" id="myslide1" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
-            <div>
+            <div v-for="p in news" :key="p.id">
                 <div class="thumbnail">
-                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
-                    <p><strong>Sig 1 - Pink</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/hoodie.jpeg" alt="Paris">
-                    <p><strong>Sig 1 - Pink </strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/Sweater Tiedye.jpg" alt="Paris">
-                    <p><strong>TSUN Mascot Shirt</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="img/thumbnail">
-                    <img src="TSUN Lit Mascot Polo.jpg" alt="Paris">
-                    <p><strong>LNY Lì Xì Tee</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/quan.jpg" alt="Paris">
-                    <p><strong>TSUN Sticker Tee</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/phukien.jpg" alt="Paris">
-                    <p><strong>TSUN Basic Shirt</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
-                    <p><strong>TSUN Mascot Cupid Tee</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/floral_hoodie_white_ms_58f5358187814fc1a75fcd7bd9d01536_master.jpg" alt="Paris">
-                    <p><strong>ABC</strong></p>
+                    <img :src="p.imgs[0]" alt="Paris">
+                    <p><strong>{{ p.title }}</strong></p>
                 </div>
             </div>
 
@@ -171,52 +111,10 @@
         <!-- ------------------------------------------- -->
         <h4>__________ SẢN PHẨM __________</h4>
         <div class="container" id="myslide2" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
-            <div>
+            <div v-for="p in fake" :key="p.id">
                 <div class="thumbnail">
-                    <img src="img/Tote Bag Canva.jpg" alt="Paris">
-                    <p><strong>TSUN Backpack</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/TSUN Mascot Tattooss Hoodieazdvc.jpg" alt="Paris">
-                    <p><strong>TSUN Mascot Tattooss </strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/TSUN Black.jpg" alt="Paris">
-                    <p><strong>TSUN Black</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
-                    <p><strong>Tsun Black Socks</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/quan.jpg" alt="Paris">
-                    <p><strong>TSUN Mascot Keychain</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/TSUN Mascot Sweater.jpg" alt="Paris">
-                    <p><strong>TSUN Mascot Sweater</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
-                    <p><strong>TSUN Mascot Wallet</strong></p>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <img src="img/floral_hoodie_white_ms_58f5358187814fc1a75fcd7bd9d01536_master.jpg" alt="Paris">
-                    <p><strong>TSUN Messenger Bag </strong></p>
+                    <img :src="p.imgs[0]" alt="Paris">
+                    <p><strong>{{ p.title }}</strong></p>
                 </div>
             </div>
 
@@ -603,48 +501,67 @@ footer .thumbnail {
 }
 </style>
 <script>
+import api from  "@/api/base"
 export default {
+    data: () => ({
+        top: [],
+        news: [],
+        fake: []
+    }),
+    created () {
+        api.get('/products')
+            .then(r => {
+            this.top = [r.data.products[0], r.data.products[1], r.data.products[2]]
+        })
+        api.get('/products?sort=desc')
+            .then(r => {
+                var num = [0, 1, 2, 3, 4, 5, 6]
+                num.forEach(i => this.news.push(r.data.products[i]))
+                var fake = [0, 5, 7, 2, 6, 9 ,13]
+                fake.forEach(i => this.fake.push(r.data.products[i]))
+        })
+    },
     mounted () {
-            $('#myslide1').slick({
+        $('#myslide1').slick({
         infinite: true,
         autoplay: true,
         autoplaySpeed: 1000,
         dots: true,
-    });
-    $('#myslide2').slick({
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        dots: true,
-    });
-    // Set the date we're counting down to
-    var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+        });
+        $('#myslide2').slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            dots: true,
+        });
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+        // Update the count down every 1 second
+        var x = setInterval(function() {
 
-        // Get today's date and time
-        var now = new Date().getTime();
+            // Get today's date and time
+            var now = new Date().getTime();
 
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="countdown"
-        document.getElementById("countdown").innerHTML = days + " Ngày " + hours + " giờ " +
-            minutes + " phút " + seconds + " giây ";
+            // Output the result in an element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + " Ngày " + hours + " giờ " +
+                minutes + " phút " + seconds + " giây ";
 
-        // If the count down is over, write some text 
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "EXPIRED";
-        }
-    }, 1000);
-   } 
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    } 
 }
 </script>
