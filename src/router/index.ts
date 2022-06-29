@@ -43,15 +43,20 @@ const router = createRouter({
       name: 'Products',
       component: () => import('../views/Product.vue')
     },
+    {
+      path: '/signup',
+      name: 'Signup',
+      component: () => import('../views/SignUp.vue')
+    },
   ]
 })
 router.beforeEach((to, from, next) => {
   if (to.path == "/signin"){
     next()
   }
-  else if (localStorage.getItem('login_status') != 'logged'){
-    next("/signin")
-  }
+  // else if (localStorage.getItem('role') == 'logged'){
+  //   next("/signin")
+  // }
   else {
     next()
   }

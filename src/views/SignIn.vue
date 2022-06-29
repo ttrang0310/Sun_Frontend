@@ -37,7 +37,13 @@ export default {
             localStorage.setItem('phone', r.data.phone)
             localStorage.setItem('address', r.data.address)
         }).then(r => {
+          if (localStorage.getItem('role') == 'admin') {
+            location.href = 'http://210.245.54.243:3000/manage'
+          } else {
             location.href = 'http://210.245.54.243:3000/homepage'
+          }
+        }).catch(function (error) {
+            alert(error.response.data.msg)
         })
     }
   }
