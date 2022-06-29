@@ -5,9 +5,9 @@
            <div> <a class="navbar-brand" href="#myPage">SUN </a></div>
 
             <div class="input-group">
-                <input type="search" class="form-control"  style="font-size:15px" placeholder="Nhập tên sản phẩm" required>
+                <input  v-model="keyword"  type="search" class="form-control"  style="font-size:15px" placeholder="Nhập tên sản phẩm" required>
                 <div class="input-group-btn">
-                    <button type="button" class="btn btn-dark" style="font-size:15px">Tìm kiếm</button>
+                    <button  @click="search_product" type="button" class="btn btn-dark" style="font-size:15px">Tìm kiếm</button>
                 </div>
                 <div></div>
             </div>
@@ -43,14 +43,14 @@
                 <div class="  ">
                     <div class="   ">
                         <div class="px-4  ">
-                            <div class="input-group ">
+                            <!-- <div class="input-group ">
                                 <input v-model="keyword" type="text" placeholder="Tìm kiếm sản phẩm...">
                                 <div class="input-group-append">
                                     <button @click="search_product" class="btn btn-dark" type="button" id="button-addon2">
                                               <i class="fas fa-search"></i>
                                     </button>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="bg-light   " style="margin-left: 200px;margin-right: 300px;">
