@@ -104,7 +104,7 @@ export default {
     methods: {
         create_order: function () {
             if (this.cart.length) {
-                api.post('/payment', {'items': this.cart})
+                api.post('/payment', {'items': this.cart, 'email': this.email, 'address': this.address, 'phone': this.phone, 'name': this.name})
                     .then(r => {
                         if (r.data.status) {
                         location.href = r.data.url
