@@ -80,7 +80,7 @@
             <a v-for="p in top" :key="p.id" :href="`/detail_product?id=${p.id}`">
                 <div class="  " style="margin-right: 200px;" >
                     <div class="thumbnail">
-                        <img :src="p.imgs[0]" alt="Paris">
+                        <img class="thumbnail" :src="p.imgs[0]" alt="Paris">
                         <p><strong>p.category</strong></p>
                         <p>Giảm giá shok</p>
                     </div>
@@ -234,8 +234,8 @@ h4 {
 }
 
 .thumbnail img {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     margin-bottom: 10px;
 }
 

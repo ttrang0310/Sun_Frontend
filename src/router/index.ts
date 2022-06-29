@@ -38,6 +38,11 @@ const router = createRouter({
       name: 'Payment',
       component: () => import('../views/Payment.vue')
     },
+    {
+      path: '/products',
+      name: 'Products',
+      component: () => import('../views/Product.vue')
+    },
   ]
 })
 router.beforeEach((to, from, next) => {
