@@ -28,7 +28,7 @@ export default {
         signup: function (){
             var body = {
                 email: this.email,
-                username: this.username,
+                name: this.name,
                 password: this.password,
                 phone: this.phone,
                 address: this.address
