@@ -81,7 +81,7 @@
                 <div class="  " style="margin-right: 160px;" >
                     <div class="thumbnail">
                         <img class="thumbnail" :src="p.imgs[0]" alt="Paris">
-                        <p><strong>p.category</strong></p>
+                        <p><strong>{{ p.category }}</strong></p>
                         <p>Giảm giá shok</p>
                     </div>
                 </div>
