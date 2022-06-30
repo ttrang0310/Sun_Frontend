@@ -75,10 +75,10 @@
     </div>
     <br>
     <!-- --------------------------------- -->
-    <div class="container  text-center ">
-        <div class="row text-center">
+    <div class="container">
+        <div class="row">
             <a v-for="p in top" :key="p.id" :href="`/detail_product?id=${p.id}`">
-                <div class="  " style="margin-right: 200px;" >
+                <div class="  " style="margin-right: 160px;" >
                     <div class="thumbnail">
                         <img class="thumbnail" :src="p.imgs[0]" alt="Paris">
                         <p><strong>p.category</strong></p>
@@ -89,21 +89,63 @@
     </div>
 </div>
     <!-- ------------------------------------------ -->
-    <div>
+    <div class="container">
 
         <h4>__________ CÂU CHUYỆN VỀ NGUỒN GỐC CỦA MẪU HOẠ TIẾT IRON FLAME _________</h4><br>
-        <video width="100%" height="500" autoplay muted>
+        <video width="1080" height="720" autoplay muted>
                 <source src="img/Grimm DC.mp4" type="video/mp4">  
             </video>
 
         <!-- ------------------------------------------- -->
         <br><br><br><br> 
         <h4>__________ SẢN PHẨM MỚI VỀ __________</h4><br>
-        <div class="container" id="myslide1" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
-            <div v-for="p in news" :key="p.id">
+        <div id="myslide1" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
+                        <div>
                 <div class="thumbnail">
-                    <img :src="p.imgs[0]" alt="Paris">
-                    <p><strong>{{ p.title }}</strong></p>
+                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
+                    <p><strong>Sig 1 - Pink</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/hoodie.jpeg" alt="Paris">
+                    <p><strong>Sig 1 - Pink </strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/Sweater Tiedye.jpg" alt="Paris">
+                    <p><strong>TSUN Mascot Shirt</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="img/thumbnail">
+                    <img src="TSUN Lit Mascot Polo.jpg" alt="Paris">
+                    <p><strong>LNY Lì Xì Tee</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/quan.jpg" alt="Paris">
+                    <p><strong>TSUN Sticker Tee</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/phukien.jpg" alt="Paris">
+                    <p><strong>TSUN Basic Shirt</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
+                    <p><strong>TSUN Mascot Cupid Tee</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/floral_hoodie_white_ms_58f5358187814fc1a75fcd7bd9d01536_master.jpg" alt="Paris">
+                    <p><strong>ABC</strong></p>
                 </div>
             </div>
 
@@ -111,10 +153,52 @@
         <!-- ------------------------------------------- -->
         <h4>__________ SẢN PHẨM __________</h4>
         <div class="container" id="myslide2" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
-            <div v-for="p in fake" :key="p.id">
+                        <div>
                 <div class="thumbnail">
-                    <img :src="p.imgs[0]" alt="Paris">
-                    <p><strong>{{ p.title }}</strong></p>
+                    <img src="img/Tote Bag Canva.jpg" alt="Paris">
+                    <p><strong>TSUN Backpack</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/TSUN Mascot Tattooss Hoodieazdvc.jpg" alt="Paris">
+                    <p><strong>TSUN Mascot Tattooss </strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/TSUN Black.jpg" alt="Paris">
+                    <p><strong>TSUN Black</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
+                    <p><strong>Tsun Black Socks</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/quan.jpg" alt="Paris">
+                    <p><strong>TSUN Mascot Keychain</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/TSUN Mascot Sweater.jpg" alt="Paris">
+                    <p><strong>TSUN Mascot Sweater</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/TSUN Lit Mascot Polo.jpg" alt="Paris">
+                    <p><strong>TSUN Mascot Wallet</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <img src="img/floral_hoodie_white_ms_58f5358187814fc1a75fcd7bd9d01536_master.jpg" alt="Paris">
+                    <p><strong>TSUN Messenger Bag </strong></p>
                 </div>
             </div>
 
@@ -163,7 +247,7 @@
     <!-- ------------- -->
     <footer class="container-fluid text-center">
 
-        <div class="row  ">
+        <div class="row ">
             <div class="col-sm-4 thumbnail ">
                 <div class="my-5">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26081603.29442044!2d-95.677068!3d37.06250000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1633069353566!5m2!1svi!2s" width=" " height="200px" style="border:0;"  
@@ -502,6 +586,7 @@ footer .thumbnail {
 </style>
 <script>
 import api from  "@/api/base"
+
 export default {
     data: () => ({
         top: [],

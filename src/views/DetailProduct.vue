@@ -42,10 +42,10 @@
     <div style="margin-top: 20px;height: 100%;">
         <div class="row">
             <div class="col-sm-3 p-3 bg-white">
-                  <img v-for="(img, idx) in product.imgs" :key="idx" style="height: 100px; width: 100px;" :src="img"> 
+                  <img @click="main_url = img" v-for="(img, idx) in product.imgs" :key="idx" style="height: 100px; width: 100px;" :src="img"> 
             </div>
             <div class="col-sm-5  bg-white">
-                <img style="height: 400px; width: 400px;" :src="product.imgs[0]">
+                <img style="height: 400px; width: 400px;" :src="main_url">
             </div>
             
             <div class="col-sm-4 p-3 bg-white">
@@ -77,12 +77,14 @@ export default {
     data: () => ({
         product: {},
         quantity: 1,
+        main_url: ''
     }),
     created () {
         var url = `/products?product_id=${this.$route.query.id}` 
         api.get(url)
             .then(r => {
                 this.product = r.data.product
+                this.main_url = r.data.product.imgs[0]
         })
     },
     methods: {
